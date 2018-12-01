@@ -2,11 +2,13 @@
 
 DZero is a robust and easy-to-use NCPDP Telecommunications Standard D.0 Message **parser** and **serializer**.
 
+🍊Battle Tested at [Instacart](https://www.instacart.com/opensource)
+
 ## Installation
 
 Add this to your gemfile:
 ```
-gem 'dzero', github: 'apiv/dzero'
+gem 'dzero'
 ```
 
 And then run bundle install.
