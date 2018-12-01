@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Parse and serialize NCPDP D0 messages"
   spec.description   = "NCPDP Telecommunications Standard D0 format serializer / parser"
-  spec.homepage      = "https://github.com/instacart"
+  spec.homepage      = "https://github.com/apiv/dzero"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
