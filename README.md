@@ -2,6 +2,28 @@
 
 DZero is a robust and easy-to-use NCPDP Telecommunications Standard D.0 Message **parser** and **serializer**.
 
+## Installation
+
+Add this to your gemfile:
+```
+gem 'dzero', github: 'apiv/dzero'
+```
+
+And then run bundle install.
+
+## Features
+
+- ✅ Complete field mapping for all **26** D.0 Segment types.
+  - This means you can access field values by a simple name instead of it's 2-character identifier. (ex: `claim_segment[:fill_number]` instead of `claim_segment['D3']`)
+- ✅ Parse D.0 Requests or Responses with ease.
+  - ex: `DZero::Transmissions::Request.parse(your_raw_string)`
+- ✅ Build D.0 Requests or Responses with ease.
+  - ex: `DZero::Transmissions::Request.new(...)` (see [Building](#Building) below)
+- ✅ Supports multiple transaction groups
+  - ex: `request.transaction_groups[2].claim_segment`
+- ✅ Serialize a D.0 message to JSON
+  - ex: `request.to_json`
+
 ## Philosophy
 
 DZero is based on the idea that a D.0 message can be represented as the following JSON object:
@@ -66,33 +88,6 @@ DZero is based on the idea that a D.0 message can be represented as the followin
   ]
 }
 ```
-
-**`header`** is a single **segment** object, containing the fields in the Transaction Header segment of the message.
-
-**`transmission_group`** is a single **group** object containing the transmission-level **segment objects** in the message. These segments may include:
-- Patient
-- Insurance
-- Response Header
-- Response Message
-- Response Insurance
-- Response Patient
-
-**`transaction_groups`** is an array of **group** objects, each of which may include the following **segment objects**:
-- Pharmacy Provider
-- Prescriber
-- Coord Of Benefits
-- Workers Comp
-- Claim
-- Dur Pps
-- Coupon
-- Compound
-- Pricing
-- Prior Auth
-- Clinical
-- Additional Documentation
-- Facility
-- Narrative
-- Response Status
 
 ## Usage
 
