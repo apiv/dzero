@@ -1,6 +1,6 @@
 # DZero
 
-DZero is a robust and easy-to-use NCPDP Telecommunications Standard D.0 Message **parser** and **serializer**.
+DZero is a robust and easy-to-use NCPDP Telecommunications Standard Version D.0 Message **parser** and **serializer**.
 
 🍊Battle Tested at [Instacart](https://www.instacart.com/opensource)
 
